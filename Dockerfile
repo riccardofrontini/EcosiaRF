@@ -5,9 +5,9 @@ RUN apt-get update
 COPY requirements.txt /code/
 RUN pip install -r /code/requirements.txt
 
-COPY ecosia_pandas.py /code/
+COPY main.py /code/
 
 WORKDIR /code
 
-CMD ["ecosia_pandas.py"]
+CMD ["maintenance.py"]
 ENTRYPOINT ["python3"]
